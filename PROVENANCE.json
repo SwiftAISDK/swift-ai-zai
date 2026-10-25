@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "package": "swift-ai-zai",
+  "version": "1.0.0",
+  "releaseID": "modular-3",
+  "source": {
+    "commit": "7fc9b4cd72f8f83b75ba7eee2e38d37127539317",
+    "baseCommit": "7fc9b4cd72f8f83b75ba7eee2e38d37127539317",
+    "workingTree": false,
+    "inputsSHA256": "49b802ba4a30454f78c9886ab3114537ef659ab3e6db7775479b7351f6e3f0ab"
+  },
+  "dependencies": [
+    {
+      "package": "swift-ai-core",
+      "from": "1.0.0"
+    },
+    {
+      "package": "swift-ai-openai-compatible",
+      "from": "1.0.0"
+    }
+  ],
+  "changes": [
+    {
+      "id": "remaining-package-extraction",
+      "notes": "Extract the existing runtime, typed settings and standalone tests from the compatibility aggregate. Preserve the reviewed npm baseline and existing capability/gap boundaries.",
+      "compatibility": "Initial independent Swift package version. Existing SwiftAISDK entry points remain in the development compatibility facade; no npm-version equivalence is implied."
+    }
+  ],
+  "canonicalDirectory": "Packages/swift-ai-zai",
+  "upstream": [
+    {
+      "name": "@ai-sdk/zai",
+      "reviewedVersion": "3.0.40",
+      "ledgerKind": "provider",
+      "evidence": "`AIProviders.zai`, `ZAIProvider`, `ZAILanguageModel`, `ZAIProviderTests.swift`",
+      "reviewStatus": "imported-reviewed-with-gaps",
+      "archiveIntegrity": "sha512-77VVYYpYk/8Cp3Jz0+33L+y4N1R4d8skAsRj9CIAsspqyLNT6ZK3+jU0BHjbrsO2np5EF34BTy8Wg+iO/CzHCg==",
+      "sourceRef": "npm:@ai-sdk/zai@3.0.40",
+      "testRef": "682e2dd71456f14f9da33a1b983d1998c3a1184c",
+      "testRefRelationship": "inventory-snapshot-not-release-verified",
+      "contractFamilies": [],
+      "contractReview": "not-imported; inspect upstream declarations before extraction"
+    }
+  ],
+  "note": "Independent port. Imported test refs and contract review gaps retain their original status; export is not new upstream parity proof.",
+  "canonicalInputs": [
+    {
+      "canonicalPath": ".github/workflows/package-check.yml",
+      "sha256": "7ff448e130f7aed96c38accdf828b6d993997ebc5317358347e9a70a649e67ca"
+    },
+    {
+      "canonicalPath": "LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-zai/Package.swift",
+      "sha256": "421c15b41bc3131e6ca4401a83d33161188cf2ab795df8ab47f226fa2049ebf7"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-zai/Porting/map.json",
+      "sha256": "4f7c112fefe6bd4751a201bd9354b9b989d29eabdbd1b69665db49ad562da801"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-zai/README.md",
+      "sha256": "13b6bf8bfc9208d652b0449f631e42188612cc33ffa947f6164ac47d2c1b7be8"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-zai/Sources/SwiftAIZAI/ZAILanguageModel.swift",
+      "sha256": "003c5c1095241306f3b0e3fbe133d7e09d8686fd5c785a5a48dc21a4e6b026b3"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-zai/Sources/SwiftAIZAI/ZAIProvider.swift",
+      "sha256": "1b6e32453811ec16c3866b693f6c832e7478c7878aae988c4333d12e91b2c5a8"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-zai/Sources/SwiftAIZAI/ZAIProviderSettings.swift",
+      "sha256": "78a9c13acb87de5f30475aadff4534bfb9ca634ac2f2afb2d61c89d633c36d41"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-zai/Tests/SwiftAIZAITests/FixtureDownloadTransport.swift",
+      "sha256": "dcbbd4e5890bed76b4ee4c990c74d35d935576361ee90b41a30acc7b3a069515"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-zai/Tests/SwiftAIZAITests/TestSupport.swift",
+      "sha256": "b1ed4053ae96d240e3dd168d88beb9849d6698dd036394b9af13d3a337c1ee9f"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-zai/Tests/SwiftAIZAITests/ZAIProviderTests.swift",
+      "sha256": "d672bb6872effd3fc0f366c7348ef1542c44702448a3c66ce19c124195737866"
+    }
+  ]
+}

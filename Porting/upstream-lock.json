@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "packages": [
+    {
+      "name": "@ai-sdk/zai",
+      "reviewedVersion": "3.0.40",
+      "ledgerKind": "provider",
+      "evidence": "`AIProviders.zai`, `ZAIProvider`, `ZAILanguageModel`, `ZAIProviderTests.swift`",
+      "reviewStatus": "imported-reviewed-with-gaps",
+      "archiveIntegrity": "sha512-77VVYYpYk/8Cp3Jz0+33L+y4N1R4d8skAsRj9CIAsspqyLNT6ZK3+jU0BHjbrsO2np5EF34BTy8Wg+iO/CzHCg==",
+      "sourceRef": "npm:@ai-sdk/zai@3.0.40",
+      "testRef": "682e2dd71456f14f9da33a1b983d1998c3a1184c",
+      "testRefRelationship": "inventory-snapshot-not-release-verified",
+      "contractFamilies": [],
+      "contractReview": "not-imported; inspect upstream declarations before extraction"
+    }
+  ]
+}

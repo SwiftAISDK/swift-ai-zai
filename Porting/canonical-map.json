@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "package": "swift-ai-zai",
+  "status": "coarse-import",
+  "upstream": [
+    {
+      "name": "@ai-sdk/zai",
+      "implementation": [
+        "packages/zai/src"
+      ],
+      "tests": [
+        "packages/zai/src/lazy-schemas.test.ts",
+        "packages/zai/src/zai-chat-language-model.test.ts",
+        "packages/zai/src/zai-provider.test.ts"
+      ]
+    }
+  ],
+  "swift": {
+    "sources": [
+      "Packages/swift-ai-zai/Sources/SwiftAIZAI/ZAILanguageModel.swift",
+      "Packages/swift-ai-zai/Sources/SwiftAIZAI/ZAIProvider.swift",
+      "Packages/swift-ai-zai/Sources/SwiftAIZAI/ZAIProviderSettings.swift"
+    ],
+    "tests": [
+      "Packages/swift-ai-zai/Tests/SwiftAIZAITests/FixtureDownloadTransport.swift",
+      "Packages/swift-ai-zai/Tests/SwiftAIZAITests/TestSupport.swift",
+      "Packages/swift-ai-zai/Tests/SwiftAIZAITests/ZAIProviderTests.swift"
+    ],
+    "resources": []
+  },
+  "differences": [
+    {
+      "kind": "native-adaptation",
+      "reason": "Preserve Swift async/await, Sendable, Foundation transport and existing documented gaps; see Docs/CoreV6Parity.md and PortingStatus.md."
+    }
+  ],
+  "reviewNote": "M6: native GLM policy and lazy-authenticated compatible adapter extracted with typed settings. Legacy settings alias and factories remain in the aggregate. Baselines and gaps unchanged."
+}
