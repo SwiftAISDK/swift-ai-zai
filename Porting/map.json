@@ -24,6 +24,7 @@
     "tests": [
       "Tests/SwiftAIZAITests/FixtureDownloadTransport.swift",
       "Tests/SwiftAIZAITests/TestSupport.swift",
+      "Tests/SwiftAIZAITests/Weekly20261101CredentialsTests.swift",
       "Tests/SwiftAIZAITests/ZAIProviderTests.swift"
     ],
     "resources": []
