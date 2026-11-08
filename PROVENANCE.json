@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "package": "swift-ai-zai",
-  "version": "1.1.0",
-  "releaseID": "weekly-upstream-20261101",
+  "version": "1.1.1",
+  "releaseID": "weekly-upstream-20261108",
   "source": {
-    "commit": "ea057797494ab9bb66df8c6bfd8edc10245b20e7",
-    "baseCommit": "ea057797494ab9bb66df8c6bfd8edc10245b20e7",
+    "commit": "8e233ff96fb809445aff9a5c06bb6149a24b94da",
+    "baseCommit": "8e233ff96fb809445aff9a5c06bb6149a24b94da",
     "workingTree": false,
-    "inputsSHA256": "b46f3e07b0a583d6fee81035987d74a06fc5c6109cbdf228144d1172d2c3676e"
+    "inputsSHA256": "987359720075cb67dd8bc45bdc049aee4c5d5a42b67a7eb148e697ce5d18bd77"
   },
   "dependencies": [
     {
@@ -16,33 +16,33 @@
     },
     {
       "package": "swift-ai-openai-compatible",
-      "from": "1.0.0"
+      "from": "1.2.0"
     }
   ],
   "changes": [
     {
-      "id": "weekly-upstream-20261101",
-      "notes": "Add native async throwing apiKeyProvider; resolve a fresh key immediately before every authenticated HTTP send/stream through the shared transport. Preserve static keys, custom header precedence, error/abort propagation, request builders and response parsers. Published ZAI now resolves asynchronous API-key suppliers for each request, including its inherited compatible streaming path. Native apiKeyProvider uses the shared transport while preserving ZAI response/options policy. Reviewed upstream: @ai-sdk/zai 3.0.40 to 3.0.44. Validation passed: node Scripts/test-packages.mjs (all 52 owning package suites and the compatibility facade); node Scripts/sdk.mjs generate --check; node --test Scripts/tests/*.test.cjs (27 passed); docs-site check and build (100 pages). Live provider calls were not run.",
-      "compatibility": "Minor release for additive native API; existing static settings and call sites remain compatible. Updated direct dependency minimums are recorded in the manifest. Existing documented JS/framework and native product gaps remain; version-delta review does not imply full parity or live-service testing. Explicit custom authentication skips an unused credential supplier, a deliberate native callback-order adaptation."
+      "id": "weekly-upstream-20261108",
+      "notes": "New internal descriptive model catalog is not publicly exported or wired to request builders. No declaration, parser, error, streaming or changed-test behavior delta. Preserve owning native ZAI chat policy and refresh user-agent. Reviewed published upstream delta: @ai-sdk/zai 3.0.44 to 3.0.49. Validation passed: node Scripts/test-packages.mjs (all 52 owning packages plus the complete local facade; 3,965 reported tests and 33 explicit live skips); node Scripts/sdk.mjs dev test; node Scripts/sdk.mjs generate --check; node --test Scripts/tests/*.test.cjs (27 passed); core/provider isolation and version resolution; 52 deterministic package exports, 106 catalog consumers and four additional exact retained-minimum graphs; docs-site install/check/build (100 pages); git diff --check. No paid live-service calls were run. The publication pipeline requires successful Swift 6.3.3 CI at the exact canonical source before publishing.",
+      "compatibility": "Patch release for behavior/header corrections without new required owning API. Existing call sites and exact old selectors are retained. Direct minimums change only for concrete API use or required inherited behavior. Version-delta review does not establish full-package parity or live-service acceptance. Updated direct ranges: swift-ai-openai-compatible 1.0.0 to 1.2.0."
     }
   ],
   "canonicalDirectory": "Packages/swift-ai-zai",
   "upstream": [
     {
       "name": "@ai-sdk/zai",
-      "reviewedVersion": "3.0.44",
+      "reviewedVersion": "3.0.49",
       "ledgerKind": "provider",
-      "evidence": "`AIProviders.zai`, `ZAIProvider`, `ZAILanguageModel`, `ZAIProviderTests.swift`; 2026-11-01 delta: Docs/WeeklyUpstreamAudit20261101.json",
+      "evidence": "`AIProviders.zai`, `ZAIProvider`, `ZAILanguageModel`, `ZAIProviderTests.swift`; 2026-11-01 delta: Docs/WeeklyUpstreamAudit20261101.json; 2026-11-08 delta: Docs/WeeklyUpstreamAudit20261108.json",
       "reviewStatus": "imported-reviewed-with-gaps",
-      "archiveIntegrity": "sha512-oU/BXC+SWD0n4cHCMwSeaIVNsMW9nQHSYsRiICUa60NG2n9oXXSCs+HPStvvcGLxG0bEHcQVP8eO3xt9YcZiPQ==",
-      "sourceRef": "npm:@ai-sdk/zai@3.0.44",
-      "testRef": "9b603d36186b75e58d5479445a96c76f6e2d2700",
+      "archiveIntegrity": "sha512-6aewCWwHKm4o6iw9WHbWFVdBRMTE7kDI9JYGORBv9TF7L1rb7vAQPx32D0GU0NkzekjZqTcp98sGO1Fjd9x3gQ==",
+      "sourceRef": "npm:@ai-sdk/zai@3.0.49",
+      "testRef": "0f3a85f92d1ce06ccde01d662407ef83e097a712",
       "testRefRelationship": "matching-release",
       "contractFamilies": [
         "LanguageModelV4",
         "ProviderV4"
       ],
-      "contractReview": "2026-11-01: published declarations, source and exact matching-release changed tests reviewed; scoped dispositions and Swift translations are in Docs/WeeklyUpstreamAudit20261101.json. Existing broader product gaps remain; reviewed delta is not full-package parity."
+      "contractReview": "2026-11-08: published declarations/source and exact matching-release changed tests reviewed; native implementations, per-file dispositions and broader retained gaps are recorded in Docs/WeeklyUpstreamAudit20261108.json. Reviewed delta is not full-package or live-service parity."
     }
   ],
   "note": "Independent port. Imported test refs and contract review gaps retain their original status; export is not new upstream parity proof.",
@@ -73,7 +73,7 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-zai/Sources/SwiftAIZAI/ZAIProvider.swift",
-      "sha256": "9fc05c852489827bdf535f6a532767d67300a51061c7a045708420b05a412d51"
+      "sha256": "c1e7977c387c517c3af77c049bb8a192057f0f713248b40f5a16f2989bfd2f2e"
     },
     {
       "canonicalPath": "Packages/swift-ai-zai/Sources/SwiftAIZAI/ZAIProviderSettings.swift",
@@ -93,7 +93,7 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-zai/Tests/SwiftAIZAITests/ZAIProviderTests.swift",
-      "sha256": "b5f71af7d82e309063bed428cbfe86bacefdb9148fd02bbe7e7fe326822444b5"
+      "sha256": "ffdcc249124935f958a6b9b794c79923f867afce296fba766e8fbf4eec2112a7"
     }
   ]
 }
