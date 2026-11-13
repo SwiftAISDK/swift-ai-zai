@@ -3,19 +3,19 @@
   "packages": [
     {
       "name": "@ai-sdk/zai",
-      "reviewedVersion": "3.0.49",
+      "reviewedVersion": "3.0.54",
       "ledgerKind": "provider",
-      "evidence": "`AIProviders.zai`, `ZAIProvider`, `ZAILanguageModel`, `ZAIProviderTests.swift`; 2026-11-01 delta: Docs/WeeklyUpstreamAudit20261101.json; 2026-11-08 delta: Docs/WeeklyUpstreamAudit20261108.json",
+      "evidence": "`AIProviders.zai`, `ZAIProvider`, `ZAILanguageModel`, `ZAIProviderTests.swift`; 2026-11-01 delta: Docs/WeeklyUpstreamAudit20261101.json; 2026-11-08 delta: Docs/WeeklyUpstreamAudit20261108.json; 2026-11-14 delta: Docs/WeeklyUpstreamAudit20261114.json",
       "reviewStatus": "imported-reviewed-with-gaps",
-      "archiveIntegrity": "sha512-6aewCWwHKm4o6iw9WHbWFVdBRMTE7kDI9JYGORBv9TF7L1rb7vAQPx32D0GU0NkzekjZqTcp98sGO1Fjd9x3gQ==",
-      "sourceRef": "npm:@ai-sdk/zai@3.0.49",
-      "testRef": "0f3a85f92d1ce06ccde01d662407ef83e097a712",
+      "archiveIntegrity": "sha512-ZEvyvzdNlft5XeuQsNkcPY2p78bsxxQYY4p/uR9bbid47VPEG5up1IJctI5eALYIsE8QJWNohA3/q1RrfjO/5g==",
+      "sourceRef": "npm:@ai-sdk/zai@3.0.54",
+      "testRef": "8bc7652cdb13fc84722666eb93f45acd0d131eee",
       "testRefRelationship": "matching-release",
       "contractFamilies": [
         "LanguageModelV4",
         "ProviderV4"
       ],
-      "contractReview": "2026-11-08: published declarations/source and exact matching-release changed tests reviewed; native implementations, per-file dispositions and broader retained gaps are recorded in Docs/WeeklyUpstreamAudit20261108.json. Reviewed delta is not full-package or live-service parity."
+      "contractReview": "2026-11-14: verified published source/declarations and exact matching-release changed tests reviewed separately; native ports, per-file dispositions and retained gaps are recorded in Docs/WeeklyUpstreamAudit20261114.json. Delta review is not full-package or live-service parity."
     }
   ]
 }

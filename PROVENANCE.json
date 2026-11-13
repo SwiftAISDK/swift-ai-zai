@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "package": "swift-ai-zai",
-  "version": "1.1.1",
-  "releaseID": "weekly-upstream-20261108",
+  "version": "1.1.2",
+  "releaseID": "weekly-upstream-20261114",
   "source": {
-    "commit": "8e233ff96fb809445aff9a5c06bb6149a24b94da",
-    "baseCommit": "8e233ff96fb809445aff9a5c06bb6149a24b94da",
+    "commit": "07fbf86b82d83d9724bd03622e9e87e74395286f",
+    "baseCommit": "07fbf86b82d83d9724bd03622e9e87e74395286f",
     "workingTree": false,
-    "inputsSHA256": "987359720075cb67dd8bc45bdc049aee4c5d5a42b67a7eb148e697ce5d18bd77"
+    "inputsSHA256": "63e472c0fe891cb7636d225e1c6467e4761dc3721be68081f2afa9f0b656bb29"
   },
   "dependencies": [
     {
@@ -21,28 +21,28 @@
   ],
   "changes": [
     {
-      "id": "weekly-upstream-20261108",
-      "notes": "New internal descriptive model catalog is not publicly exported or wired to request builders. No declaration, parser, error, streaming or changed-test behavior delta. Preserve owning native ZAI chat policy and refresh user-agent. Reviewed published upstream delta: @ai-sdk/zai 3.0.44 to 3.0.49. Validation passed: node Scripts/test-packages.mjs (all 52 owning packages plus the complete local facade; 3,965 reported tests and 33 explicit live skips); node Scripts/sdk.mjs dev test; node Scripts/sdk.mjs generate --check; node --test Scripts/tests/*.test.cjs (27 passed); core/provider isolation and version resolution; 52 deterministic package exports, 106 catalog consumers and four additional exact retained-minimum graphs; docs-site install/check/build (100 pages); git diff --check. No paid live-service calls were run. The publication pipeline requires successful Swift 6.3.3 CI at the exact canonical source before publishing.",
-      "compatibility": "Patch release for behavior/header corrections without new required owning API. Existing call sites and exact old selectors are retained. Direct minimums change only for concrete API use or required inherited behavior. Version-delta review does not establish full-package parity or live-service acceptance. Updated direct ranges: swift-ai-openai-compatible 1.0.0 to 1.2.0."
+      "id": "weekly-upstream-20261114",
+      "notes": "Avoid duplicate unsupported topK warnings across the native Z.AI/compatible boundary for generation and streaming. Refresh the versioned request identity while retaining the current native request, response and stream behavior. Internal upstream model-catalog reorganizations preserve the existing native policies. Reviewed npm delta: @ai-sdk/zai 3.0.49 to 3.0.54. Validation: `node Scripts/test-packages.mjs` passed all 52 owning suites and 1731 facade tests; tooling 27/27, generation/isolation checks, standalone exports and 106 minimum/latest consumers, documentation check and 101-page build passed. Publication requires green exact-source Swift 6.3.3 CI. Paid/live verification and full-package parity are not claimed.",
+      "compatibility": "Compatible behavior/header correction. Original public selectors are preserved. npm baselines and Swift SemVer are independent; this reviewed delta does not establish full-package or live-service parity."
     }
   ],
   "canonicalDirectory": "Packages/swift-ai-zai",
   "upstream": [
     {
       "name": "@ai-sdk/zai",
-      "reviewedVersion": "3.0.49",
+      "reviewedVersion": "3.0.54",
       "ledgerKind": "provider",
-      "evidence": "`AIProviders.zai`, `ZAIProvider`, `ZAILanguageModel`, `ZAIProviderTests.swift`; 2026-11-01 delta: Docs/WeeklyUpstreamAudit20261101.json; 2026-11-08 delta: Docs/WeeklyUpstreamAudit20261108.json",
+      "evidence": "`AIProviders.zai`, `ZAIProvider`, `ZAILanguageModel`, `ZAIProviderTests.swift`; 2026-11-01 delta: Docs/WeeklyUpstreamAudit20261101.json; 2026-11-08 delta: Docs/WeeklyUpstreamAudit20261108.json; 2026-11-14 delta: Docs/WeeklyUpstreamAudit20261114.json",
       "reviewStatus": "imported-reviewed-with-gaps",
-      "archiveIntegrity": "sha512-6aewCWwHKm4o6iw9WHbWFVdBRMTE7kDI9JYGORBv9TF7L1rb7vAQPx32D0GU0NkzekjZqTcp98sGO1Fjd9x3gQ==",
-      "sourceRef": "npm:@ai-sdk/zai@3.0.49",
-      "testRef": "0f3a85f92d1ce06ccde01d662407ef83e097a712",
+      "archiveIntegrity": "sha512-ZEvyvzdNlft5XeuQsNkcPY2p78bsxxQYY4p/uR9bbid47VPEG5up1IJctI5eALYIsE8QJWNohA3/q1RrfjO/5g==",
+      "sourceRef": "npm:@ai-sdk/zai@3.0.54",
+      "testRef": "8bc7652cdb13fc84722666eb93f45acd0d131eee",
       "testRefRelationship": "matching-release",
       "contractFamilies": [
         "LanguageModelV4",
         "ProviderV4"
       ],
-      "contractReview": "2026-11-08: published declarations/source and exact matching-release changed tests reviewed; native implementations, per-file dispositions and broader retained gaps are recorded in Docs/WeeklyUpstreamAudit20261108.json. Reviewed delta is not full-package or live-service parity."
+      "contractReview": "2026-11-14: verified published source/declarations and exact matching-release changed tests reviewed separately; native ports, per-file dispositions and retained gaps are recorded in Docs/WeeklyUpstreamAudit20261114.json. Delta review is not full-package or live-service parity."
     }
   ],
   "note": "Independent port. Imported test refs and contract review gaps retain their original status; export is not new upstream parity proof.",
@@ -61,7 +61,7 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-zai/Porting/map.json",
-      "sha256": "639c3899805b6f1286df46b91a42f15f8df316ab87a192948c2608328631506b"
+      "sha256": "f96311a8eb867bdeadb01e4beba046fb85a1adcff0f20f9eb61730a6b152ed5f"
     },
     {
       "canonicalPath": "Packages/swift-ai-zai/README.md",
@@ -69,11 +69,11 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-zai/Sources/SwiftAIZAI/ZAILanguageModel.swift",
-      "sha256": "003c5c1095241306f3b0e3fbe133d7e09d8686fd5c785a5a48dc21a4e6b026b3"
+      "sha256": "730aa3411da3e831e00e68fd5a3ac0d0664f8b0b3defede58244bd5aaae77d20"
     },
     {
       "canonicalPath": "Packages/swift-ai-zai/Sources/SwiftAIZAI/ZAIProvider.swift",
-      "sha256": "c1e7977c387c517c3af77c049bb8a192057f0f713248b40f5a16f2989bfd2f2e"
+      "sha256": "298274dc1de945b421692bb5b42c13aa5f66a1d0dd4c2039107a2bc2e0fb984c"
     },
     {
       "canonicalPath": "Packages/swift-ai-zai/Sources/SwiftAIZAI/ZAIProviderSettings.swift",
@@ -92,8 +92,12 @@
       "sha256": "3d8936155f5ef07fbcb6f9013d1e9bc4c54dbc6de658c3e88fe834b00de7d9d1"
     },
     {
+      "canonicalPath": "Packages/swift-ai-zai/Tests/SwiftAIZAITests/Weekly20261114WarningTests.swift",
+      "sha256": "3d280f7c7e83536a4d50d49d840c4009c7e5e64dff9ec7f8ebb8ef139c8a06b2"
+    },
+    {
       "canonicalPath": "Packages/swift-ai-zai/Tests/SwiftAIZAITests/ZAIProviderTests.swift",
-      "sha256": "ffdcc249124935f958a6b9b794c79923f867afce296fba766e8fbf4eec2112a7"
+      "sha256": "32bbf42fe23edf389749e16f74c4f440bd46df7138520308aef484b6568ae34d"
     }
   ]
 }
