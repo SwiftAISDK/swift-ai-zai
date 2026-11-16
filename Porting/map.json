@@ -26,7 +26,8 @@
       "Tests/SwiftAIZAITests/TestSupport.swift",
       "Tests/SwiftAIZAITests/Weekly20261101CredentialsTests.swift",
       "Tests/SwiftAIZAITests/Weekly20261114WarningTests.swift",
-      "Tests/SwiftAIZAITests/ZAIProviderTests.swift"
+      "Tests/SwiftAIZAITests/ZAIProviderTests.swift",
+      "Tests/SwiftAIZAITests/ZAIWarningOrderTests.swift"
     ],
     "resources": []
   },
